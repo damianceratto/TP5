@@ -10,6 +10,16 @@
  */
 public class Arreglos {
     
+    //a) Método sumarLista que reciba por parámetro un arreglo unidimensional de enteros y muestre por pantalla la suma y promedio de los mismos.
+    
+    public static void sumarLista(ArrayList<Integer> list){
+        
+        
+        
+    }
+    
+    
+    
     public static void m1(){
     int algo[]={22,45,67,90};
 
@@ -97,7 +107,7 @@ System.out.println(matriz[f][y]);*/
         
         
    
-}/*a) Método sumarLista que reciba por parámetro un arreglo unidimensional de enteros y muestre por pantalla la suma y promedio de los mismos.
+}/*
 b) Método buscarMayor que reciba por parámetro un arreglo bidimensional e irregular de enteros y retorne el entero más grande que se encuentra
 en el arreglo.
 c) Método cuentaVocales, que reciba por parámetro un String y retorne la cantidad de vocales que tiene la cadena.
