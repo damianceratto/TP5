@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,104 +15,57 @@ public class Arreglos {
     
     //a) Método sumarLista que reciba por parámetro un arreglo unidimensional de enteros y muestre por pantalla la suma y promedio de los mismos.
     
-    public static void sumarLista(ArrayList<Integer> list){
-        
-        
-        
+    public static void sumarLista(Integer[] list){
+        int sumatoria=0;
+        float promedio=0;
+        for(int i=0;i<list.length;i++){
+        sumatoria += list[i];
+    }
+        promedio = sumatoria/list.length;
+        System.out.println("La suma de los enteros es: "+ sumatoria + " y el promedio es: "+promedio);
     }
     
+    //b) Método buscarMayor que reciba por parámetro un arreglo bidimensional e irregular de enteros y retorne el entero más grande que se encuentra en el arreglo.
     
-    
-    public static void m1(){
-    int algo[]={22,45,67,90};
-
-    for(int i=0;i<4;i++){
-if(algo[i]%2==0){
-System.out.println(algo[i]);
-}
+    public static void buscarMayor(Integer[][] matrix){
+        int aux=0;
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[i].length;j++){
+                if(matrix[i][j]>aux){
+                    aux=matrix[i][j];
+                }
+                    }
+                         }
+        
+        System.out.println("El enteros más grande es: "+ aux);
     }
-    //for(String palabra:algo)
-    //System.out.println(palabra)
-}
-    public static void m2(){
-        int matriz[][] = {{12,15,16,21},{24,27,30,33},{36,39,42,45}};
-       /* for(int f=0;f<3;f++){
-for(int y=0;y<4;y++){
-System.out.println(matriz[f][y]);*/
-
-        
-            
-        for(int f = 0; f < matriz.length;f++){
-            for(int j = 0; j < 4;j++){
-                System.out.print(matriz[f][j]+" ");
-            }
-            System.out.println();
-        }
-        
-        for(int[] a:matriz){
-            for( int b:a){
-                System.out.println(b+" ");
-            }
-            System.out.println();
-        }
+    //c) Método cuentaVocales, que reciba por parámetro un String y retorne la cantidad de vocales que tiene la cadena.
     
-        
-    }
-    public static void m3(){
-        
-        int matriz[][] = {{48,75,5},{25,3,-1},{49,7,6}};
-        
-        for(int f = 0; f < matriz.length;f++){
-            for(int j = 0; j < 4;j++){
-                if(f==j){
-                    System.out.print(matriz[f][j]+" ");
-            }
-            }
-            System.out.print("");
-        }
-        
-        
-    }
-    public static void m4(){
-        int matriz[][]={{12,33,44},{45,3},{3}};
-    
-    
-    
-    
-}
-    /*public void m6(int lista[][]){
-        int[] auxLista = lista[lista.length - 1 ];
-        
-        for(int f:auxLista){
-            if(f%2 != 0){
-                System.out.println(f);
-            }
+    public static void cuentaVocales(String vocales){
+    int voc = 0;
+    for(int x = 0;x < vocales.length(); x++){
+        if (vocales.charAt(x) == 'a' || vocales.charAt(x) == 'e' || vocales.charAt(x) == 'i' || vocales.charAt(x) =='o' || vocales.charAt(x) == 'u' || vocales.charAt(x) == 'A' || vocales.charAt(x) == 'E' || vocales.charAt(x) == 'I' || vocales.charAt(x) =='O' || vocales.charAt(x) == 'U' || vocales.charAt(x) == 'á' || vocales.charAt(x) == 'é' || vocales.charAt(x) == 'í' || vocales.charAt(x) =='ó' || vocales.charAt(x) == 'ú' || vocales.charAt(x) == 'Á' || vocales.charAt(x) == 'É' || vocales.charAt(x) == 'Í' || vocales.charAt(x) =='Ó' || vocales.charAt(x) == 'Ú'){
+            voc = voc+1;
         }
     }
-*/
-    
-    
-    public static void m5(String x[][]){//muestra la cantidad de caracteres de la primera línea de la matriz
-    String matriz[][]=x;
-    
-    for(String a:matriz[0]){
-            //for( String b:a){
-                System.out.println(a.length());
-           // }
-           // System.out.println();
-        }
-        
-    
+        System.out.println("La cantidad de vocales son: "+voc);
     }
-
-
-
-        
-        
-   
-}/*
-b) Método buscarMayor que reciba por parámetro un arreglo bidimensional e irregular de enteros y retorne el entero más grande que se encuentra
-en el arreglo.
-c) Método cuentaVocales, que reciba por parámetro un String y retorne la cantidad de vocales que tiene la cadena.
-d) Método cuentaCaracter que reciba por parámetro un String y un caracter, luego retorne la cantidad de veces que se repite en la cadena el
+       
+/*d) Método cuentaCaracter que reciba por parámetro un String y un caracter, luego retorne la cantidad de veces que se repite en la cadena el
 carácter recibido.*/
+    
+    public static void cuentaCaracter(String palabra, char letra){
+    int cont = 0;
+    for(int x = 0;x < palabra.length(); x++){
+        if (palabra.charAt(x) == letra){
+            cont = cont+1;
+        }
+    }
+        if(cont>0){
+                System.out.println("Se encontraron "+cont+ " caracteres iguales en la palabra.");
+        }else{
+            System.out.println("El caracter ingresado no exciste en la palabra.");
+        }
+    }
+       
+}
